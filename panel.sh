@@ -9,7 +9,7 @@
 #Если панель не найдена, дождаться пока она появится снова, получить json с /info/version и записать  в лог
 
 XXX=`jps -v | grep "\-DpanelName=" | cut -d " " -f1`
-if [ ${XXX} ]; then
+if [ "$XXX" != "" ]; then
     echo "yes" #панель найдена через jsp
 else
     echo "no" #панель не найдена через jsp
